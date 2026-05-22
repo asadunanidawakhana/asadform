@@ -10,8 +10,8 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Card } from "@/components/ui/Card";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://rddjzywsfbtmoszmpnhn.supabase.co";
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJkZGp6eXdzZmJ0bW9zem1wbmhuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk0NTI2MjAsImV4cCI6MjA5NTAyODYyMH0.JgbmBkmSZODLDVEg55rlONaqqO8XucuJ-62ba5VbxDw";
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 
 const sb = createClient(supabaseUrl, supabaseAnonKey, { auth: { persistSession: false } });
 
